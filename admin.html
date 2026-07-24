@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Circle - Admin</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="screen active">
+
+        <div class="card">
+
+            <h1>🎮 Secret Circle Admin</h1>
+
+            <h2 id="roundText">Round 1</h2>
+
+            <p id="statusText">
+                Status: Waiting
+            </p>
+
+            <hr>
+
+            <p>
+                <strong>👥 Players Registered:</strong>
+                <span id="playerCount">0</span>
+            </p>
+
+            <p>
+                <strong>🗳️ Votes Received:</strong>
+                <span id="voteCount">0</span>
+            </p>
+
+            <hr>
+
+            <button id="startVotingBtn">
+                ▶️ Start Voting
+            </button>
+
+            <button id="revealResultsBtn">
+                🎉 Reveal Results
+            </button>
+
+            <hr>
+
+            <div id="resultsSection" style="display:none;">
+
+                <h2>🏆 Round Results</h2>
+
+                <div id="resultsContainer"></div>
+
+            </div>
+
+            <hr>
+
+            <button id="nextRoundBtn">
+                ➡️ Next Round
+            </button>
+
+            <button id="endGameBtn">
+                🛑 End Game
+            </button>
+
+            <button id="resetGameBtn" class="danger-btn">🔄 Reset Game</button>
+
+        </div>
+
+    </section>
+
+    <script type="module" src="js/admin.js"></script>
+
+</body>
+
+</html>

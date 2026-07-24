@@ -1,0 +1,541 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+}
+
+:root{
+
+    --bg:#09090B;
+    --card:#18181B;
+    --text:#FFFFFF;
+    --muted:#A1A1AA;
+
+    --primary:#7C3AED;
+    --primaryHover:#6D28D9;
+
+    --success:#16A34A;
+
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.blob{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.45;
+
+    animation:float 12s ease-in-out infinite alternate;
+
+}
+
+.blob1{
+
+    width:260px;
+    height:260px;
+
+    background:#7C3AED;
+
+    top:-80px;
+    left:-80px;
+
+}
+
+.blob2{
+
+    width:250px;
+    height:250px;
+
+    background:#2563EB;
+
+    bottom:-100px;
+    right:-80px;
+
+}
+
+.blob3{
+
+    width:180px;
+    height:180px;
+
+    background:#EC4899;
+
+    top:40%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+@keyframes float{
+
+    from{
+
+        transform:translateY(0px);
+
+    }
+
+    to{
+
+        transform:translateY(40px);
+
+    }
+
+}
+
+/* ===========================
+   SCREEN
+=========================== */
+
+.screen{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:25px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    animation:fade .35s;
+
+}
+
+.screen.active{
+
+    display:flex;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   LANDING
+=========================== */
+
+.logo{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+h1{
+
+    font-size:42px;
+
+    text-align:center;
+
+}
+
+.tagline{
+
+    margin-top:15px;
+
+    color:var(--muted);
+
+    text-align:center;
+
+    line-height:1.6;
+
+    max-width:300px;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    width:100%;
+
+    max-width:420px;
+
+    background:rgba(24,24,27,.85);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+
+}
+
+.card h2{
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+input[type=text]{
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:#27272A;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+input[type=text]:focus{
+
+    border:2px solid var(--primary);
+
+}
+
+/* ===========================
+   GENDER
+=========================== */
+
+.genderContainer{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin:25px 0;
+
+}
+
+.genderOption{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    background:var(--primaryHover);
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   WAITING
+=========================== */
+
+.waitingStatus{
+
+    margin-top:20px;
+
+    background:#27272A;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    color:#DDD;
+
+}
+
+/* ===========================
+   OPTIONS
+=========================== */
+
+#optionsContainer{
+
+    margin-top:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.option{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    background:#27272A;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.option:hover{
+
+    background:#323238;
+
+}
+
+.landingBtn{
+
+    width:220px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        #7C3AED,
+        #A855F7
+    );
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 30px rgba(124,58,237,.4);
+
+    transition:.3s;
+
+}
+
+.landingBtn:hover{
+
+    transform:translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 15px 40px rgba(124,58,237,.6);
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+    .card{
+
+        padding:22px;
+
+    }
+
+}
+
+/* ===========================
+   RESULTS
+=========================== */
+
+#resultsSection{
+    margin-top:25px;
+}
+
+.result-card{
+
+    background:#27272A;
+
+    border-radius:16px;
+
+    padding:16px;
+
+    margin-bottom:16px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    animation:fade .4s ease;
+}
+
+.result-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+    font-size:16px;
+}
+
+.vote-bar{
+
+    width:100%;
+
+    height:16px;
+
+    background:#3F3F46;
+
+    border-radius:999px;
+
+    overflow:hidden;
+}
+
+.vote-fill{
+
+    height:100%;
+
+    width:0;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #7C3AED,
+        #A855F7
+    );
+
+    transition:width 1.2s ease;
+}
+
+#winnerCard{
+
+    margin-top:25px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #7C3AED,
+        #A855F7
+    );
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    animation:fade .5s ease;
+}
